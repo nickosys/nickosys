@@ -64,7 +64,6 @@
     
     <access origin="*" />
 	<access origin="https://www.facebook.com/" />
-	<access origin="https://app.roootsj.com/" />
 	
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -82,7 +81,6 @@
 	
 	<allow-intent href="*" />
 	<allow-navigation href="*" />
-	<allow-navigation href="https://app.roootsj.com/*" />
 	
 	<allow-intent href="*.app.roootsj.com/*"/>
 	<allow-access href="https://*/*" />

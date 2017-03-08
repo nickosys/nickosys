@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.robhaenenroootsj.Roootsj" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Roootsj</name>
+    <description>
+        A new Roootsj Cordova app.
+    </description>
+    <author email="rob@roootsj.com" href="https://app.roootsj.com/">
+        Roootsj Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <access origin="https://www.facebook.com/" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <allow-navigation href="*" />
+    <icon src="icon.png" />
+    <icon density="ldpi" platform="android" src="res/icon/android/icon-36-ldpi.png" />
+    <icon density="mdpi" platform="android" src="res/icon/android/icon-48-mdpi.png" />
+    <icon density="hdpi" platform="android" src="res/icon/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" platform="android" src="res/icon/android/icon-96-xhdpi.png" />
+    <splash density="ldpi" platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
+    <splash density="mdpi" platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
+    <splash density="hdpi" platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
+    <splash density="xhdpi" platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="fullscreen" value="false" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="6000" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+</widget>

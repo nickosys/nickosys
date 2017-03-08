@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.robhaenenroootsj.Roootsj" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Roootsj</name>
+    <description>
+     Roootsj is a PhoneGap app. This app gives you insight into all the playgrounds in your own neighborhood!
+    </description>
+    <author email="rob@roootsj.com" href="https://app.roootsj.com/">
+        Roootsj Team
+    </author>
+    <content src="index.html" />
+    
+	<preference name="DisallowOverscroll" value="true"/> 
+	<preference name="fullscreen" value="false" />
+	<preference name="SplashScreen" value="splash"/>
+	<preference name="SplashScreenDelay" value = "4000" />
+	<preference name="ShowSplashScreenSpinner" value="false" />
+	<preference name="orientation" value="portrait" />
+    <preference name="target-device" value="universal" />   
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-installLocation" value="auto" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	
+	
+    <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.3" />
+    <plugin name="phonegap-plugin-push" source="npm" spec="~1.8.0">
+        <variable name="SENDER_ID" value="560922606646" />
+    </plugin>
+    <plugin name="cordova-plugin-console" source="npm" spec="~1.0.3" />
+    <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	<plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
+	<plugin name="cordova-plugin-geolocation" spec="~2.4.1" />
+	<plugin name="cordova-plugin-network-information" spec="1.3.1" />
+	<plugin name="cordova-plugin-device-orientation" spec="~1.0.5" />
+	<plugin name="cordova-plugin-inappbrowser" spec="~1.6.1" browserOnly="true"/>
+	<plugin name="cordova-plugin-camera" spec="~2.3.1" />
+	
+	
+    <platform name="android">
+		<icon src="icon.png" />
+		<icon density="ldpi" platform="android" src="res/icon/android/icon-36-ldpi.png" />
+		<icon density="mdpi" platform="android" src="res/icon/android/icon-48-mdpi.png" />
+		<icon density="hdpi" platform="android" src="res/icon/android/icon-72-hdpi.png" />
+		<icon density="xhdpi" platform="android" src="res/icon/android/icon-96-xhdpi.png" />      
+		
+		<splash density="ldpi" platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
+		<splash density="mdpi" platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
+		<splash density="hdpi" platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
+		<splash density="xhdpi" platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />        
+      
+    </platform>    
+    
+    <access origin="*" />
+	<access origin="https://www.facebook.com/" />
+	<access origin="https://app.roootsj.com/" />
+	
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+	
+	<allow-intent href="*" />
+	<allow-navigation href="*" />
+	<allow-navigation href="https://app.roootsj.com/*" />
+	
+	<allow-intent href="*.app.roootsj.com/*"/>
+	<allow-access href="https://*/*" />
+	<allow-navigation href="http://*/*" />
+	<allow-intent href="*://*.app.roootsj.com/*" />
+
+</widget>

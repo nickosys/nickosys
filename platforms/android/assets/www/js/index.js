@@ -19,58 +19,27 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
+
     // deviceready Event Handler
     //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        var push = PushNotification.init({
-            "android": {
-                "senderID": "560922606646"
-            },
-            "ios": {"alert": "true", "badge": "true", "sound": "true"}, 
-            "windows": {} 
-        });
-        
-        push.on('registration', function(data) {
-            console.log("registration event");
-            document.getElementById("regId").innerHTML = data.registrationId;
-            console.log(JSON.stringify(data));
-        });
+        this.receivedEvent('deviceready');
+    },
 
-        push.on('notification', function(data) {
-        	console.log("notification event");
-            console.log(JSON.stringify(data));
-            var cards = document.getElementById("cards");
-            var card = '<div class="row">' +
-		  		  '<div class="col s12 m6">' +
-				  '  <div class="card darken-1">' +
-				  '    <div class="card-content black-text">' +
-				  '      <span class="card-title black-text">' + data.title + '</span>' +
-				  '      <p>' + data.message + '</p>' +
-				  '    </div>' +
-				  '  </div>' +
-				  ' </div>' +
-				  '</div>';
-            cards.innerHTML += card;
-            
-            push.finish(function () {
-                console.log('finish successfully called');
-            });
-        });
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
 
-        push.on('error', function(e) {
-            console.log("push error");
-        });
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
     }
 };
 

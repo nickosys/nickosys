@@ -1,26 +1,16 @@
 {
-    "cordova-plugin-splashscreen": {
+    "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-splashscreen@4.0.1"
+            "id": "cordova-plugin-whitelist@1"
         },
         "is_top_level": true,
         "variables": {}
     },
-    "phonegap-plugin-push": {
+    "cordova-plugin-splashscreen": {
         "source": {
             "type": "registry",
-            "id": "phonegap-plugin-push@~1.8.0"
-        },
-        "is_top_level": true,
-        "variables": {
-            "SENDER_ID": "560922606646"
-        }
-    },
-    "cordova-plugin-geolocation": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-geolocation"
+            "id": "cordova-plugin-splashscreen@4.0.2"
         },
         "is_top_level": true,
         "variables": {}
@@ -44,27 +34,9 @@
     "cordova-plugin-inappbrowser": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-inappbrowser@1.6.1"
+            "id": "cordova-plugin-inappbrowser@1.7.0"
         },
         "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-camera": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-camera"
-        },
-        "is_top_level": true,
-        "variables": {
-            "CAMERA_USAGE_DESCRIPTION": "This app is having a profile section. It requires to upload pictures from device"
-        }
-    },
-    "cordova-plugin-compat": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-compat"
-        },
-        "is_top_level": false,
         "variables": {}
     }
 }
